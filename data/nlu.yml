@@ -1,0 +1,65 @@
+version: "3.1"
+
+nlu:
+
+- intent: response_city
+  examples: |
+    - Je souhaiterais réserver un hôtel à [Nantes](city)
+    - Je voudrais réserver un hôtel à [Paris](city)
+
+- lookup: city
+  examples: |
+    - Angers
+    - Lyon
+
+- intent: response_date
+  examples: |
+    - Le [7 Mars 2024](date)
+    - Le [28 Mai](date)
+    - Pour le [19 Juillet](date)
+
+- intent: response_night
+  examples: |
+    - Pour [7 nuits](night)
+    - Pendant [3 nuits](night)
+
+- intent: meteo
+  examples: |
+    - Donne-moi la météo
+    - Quel temps fait-il ?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

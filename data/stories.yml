@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+
+- story: meteo
+  steps:
+  - intent: meteo
+  - action: utter_meteo
+
+- story: booking
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: response_city
+    - action: utter_city
+    - intent: response_date
+    - action: utter_date
+    - intent: response_night
+    - action: utter_night

@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - meteo
+  - response_city
+  - response_date
+  - response_night
+
+responses:
+  utter_greet:
+  - text: "Bonjour, je suis un ChatBot de réservation de voyages. Que puis-je faire pour vous ?"
+
+  utter_meteo:
+  - text: "Il fait beau, il y a du soleil !"
+
+  utter_city:
+  - text: "A quelle date voulez-vous réserver cet hôtel ?"
+
+  utter_date:
+  - text: "Pour combien de nuits voulez-vous que je réserve cet hôtel ?"
+
+  utter_night:
+  - text: "En résumé, vous voulez que je réserve un hôtel pour {slot_night} à {slot_city} le {slot_date}."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+entities:
+  - city
+  - date
+  - night
+
+slots:
+  slot_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city
+  slot_date:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date
+  slot_night:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: night
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
