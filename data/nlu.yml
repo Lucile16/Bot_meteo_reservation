@@ -2,64 +2,51 @@ version: "3.1"
 
 nlu:
 
-- intent: response_city
+- intent: nouvelle_reservation
   examples: |
-    - Je souhaiterais réserver un hôtel à [Nantes](city)
-    - Je voudrais réserver un hôtel à [Paris](city)
+    - Je souhaite faire une réservation dans un restaurant
+    - J'aimerais réserver une table
+    - Faire une nouvelle réservation
 
-- lookup: city
+- intent: annulation_reservation
   examples: |
-    - Angers
-    - Lyon
+    - J'aimerais annuler une réservation
+    - Je veux annuler
+    - Effectuer l'annulation d'une réservation
 
-- intent: response_date
+- intent: infos_reservation
   examples: |
-    - Le [7 Mars 2024](date)
-    - Le [28 Mai](date)
-    - Pour le [19 Juillet](date)
+    - J'aimerais connaître les informations d'une réservation
+    - Je veux connaître les informations d'une réservation
+    - Avoir des infos sur une réservation
 
-- intent: response_night
+- intent: menu_du_jour
   examples: |
-    - Pour [7 nuits](night)
-    - Pendant [3 nuits](night)
+    - Je veux connaître le menu du jour
+    - Donne-moi le menu du jour
+    - Connaître le menu du jour
 
-- intent: meteo
+- intent: liste_allergenes
   examples: |
-    - Donne-moi la météo
-    - Quel temps fait-il ?
+    - Je veux connaître la liste des allergènes
+    - Donnez-moi la liste des allergènes
+    - Connaître la liste des allergènes
 
-- intent: greet
+- intent: carte
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Je veux avoir le lien vers la carte
+    - Donnez-moi le lien vers la carte
+    - Avoir le lien vers la carte
 
-- intent: goodbye
+- intent: salutations
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Bonjour
+    - Coucou
+    - Salut
+    - Bonsoir
 
-- intent: bot_challenge
+- intent: aurevoir
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Au revoir !
+    - A la prochaine !
+    - Adieu

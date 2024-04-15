@@ -2,18 +2,44 @@ version: "3.1"
 
 stories:
 
-- story: meteo
+- story: nouvelle reservation
   steps:
-  - intent: meteo
-  - action: utter_meteo
+  - intent: salutations
+  - action: utter_salutations
+  - intent: nouvelle_reservation
+  - action: action_nouvelle_reservation
 
-- story: booking
+- story: annulation reservation
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: response_city
-    - action: utter_city
-    - intent: response_date
-    - action: utter_date
-    - intent: response_night
-    - action: utter_night
+  - intent: salutations
+  - action: utter_salutations
+  - intent: annulation_reservation
+  - action: action_annulation_reservation
+
+- story: infos reservation
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+  - intent: infos_reservation
+  - action: action_infos_reservation
+
+- story: menu du jour
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+  - intent: menu_du_jour
+  - action: action_menu_du_jour
+
+- story: liste allergenes
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+  - intent: liste_allergenes
+  - action: action_liste_allergenes
+
+- story: lien carte
+  steps:
+  - intent: salutations
+  - action: utter_salutations
+  - intent: carte
+  - action: action_carte

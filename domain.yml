@@ -1,59 +1,29 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - bot_challenge
-  - meteo
-  - response_city
-  - response_date
-  - response_night
+  - salutations
+  - aurevoir
+  - nouvelle_reservation
+  - annulation_reservation
+  - infos_reservation
+  - menu_du_jour
+  - liste_allergenes
+  - carte
+
+actions:
+  - action_nouvelle_reservation
+  - action_annulation_reservation
+  - action_infos_reservation
+  - action_menu_du_jour
+  - action_liste_allergenes
+  - action_carte
 
 responses:
-  utter_greet:
-  - text: "Bonjour, je suis un ChatBot de réservation de voyages. Que puis-je faire pour vous ?"
-
-  utter_meteo:
-  - text: "Il fait beau, il y a du soleil !"
-
-  utter_city:
-  - text: "A quelle date voulez-vous réserver cet hôtel ?"
-
-  utter_date:
-  - text: "Pour combien de nuits voulez-vous que je réserve cet hôtel ?"
-
-  utter_night:
-  - text: "En résumé, vous voulez que je réserve un hôtel pour {slot_night} à {slot_city} le {slot_date}."
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-entities:
-  - city
-  - date
-  - night
-
-slots:
-  slot_city:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: city
-  slot_date:
-    type: text
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: date
-  slot_night:
-    type: text
-    influence_conversation: false
-    mappings:
-      - type: from_entity
-        entity: night
+  utter_salutations:
+  - text: "Bonjour, vous pouvez : \n - Faire une nouvelle réservation \n - Effectuer l'annulation d'une réservation \n - Avoir des infos sur une réservation \n - Connaître le menu du jour \n - Connaître la liste des allergènes \n - Avoir le lien vers la carte"
+  
+  utter_aurevoir:
+  - text: "Au revoir !"
 
 session_config:
   session_expiration_time: 60
